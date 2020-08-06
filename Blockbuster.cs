@@ -6,7 +6,7 @@ namespace GC_Lab_Blockbuster
 {
     class Blockbuster
     {
-        public List<Movie> Movies = new List<Movie>
+        public List<Movie> Movies = new List<Movie>  //generates list of movies available
             {
                 new DVD("Star Wars", Genre.Action, 100, new List<string> {"Title Scrawl/Fanfare", "Vader kills some dudes", "Use the Force!", "Run...Run...Run..Jump!", "Seagulls, stop it now!","Directed by George Lucas" } ),
                 new DVD("Avengers", Genre.Drama, 120, new List<string>{"Comic Book Style Intro", "Explosions!", "Cap and Tony argue", "Cap and Tony kinda make up", "BIG FIGHT!", "The End"}),
@@ -15,7 +15,7 @@ namespace GC_Lab_Blockbuster
                 new VHS("Indiana Jones", Genre.Action, 100, new List<string>{"Intro", "Adventure time!", "The floors on fire!", "And the chair!", "Found the shiny!", "How isn't he dead yet?", "The End!"}, 0),
                 new VHS("Alladin", Genre.Romance, 90, new List<string>{"Disney Intro", "Lots of sand", "Is that Robin Williams? (Genie)", "Pauper to Prince", "The monkey turned into an elephant?", "Gilbert Godfreid", "Oh no, the bad guy might win", "Just kidding, bad guy lost", "The End!" }, 0)
             };
-        public void PrintMovies()
+        public void PrintMovies() //prints a list of movies
         {
             Console.WriteLine("MOVIE LIST");
             for (int i = 0; i < Movies.Count; i++)
@@ -24,7 +24,7 @@ namespace GC_Lab_Blockbuster
             }
         }
 
-        public void CheckOut()
+        public void CheckOut()  
         {
             string input = "";
             int choice = 0;
@@ -33,7 +33,7 @@ namespace GC_Lab_Blockbuster
             PrintMovies();
             Console.Write("Please enter the number of the movie you'd like to check out: ");
 
-            while (!validEntry)
+            while (!validEntry)  //validates entry for movie check out
             {
                 input = Console.ReadLine();
 
@@ -73,7 +73,7 @@ namespace GC_Lab_Blockbuster
             if (input == "y")
             {
                 Console.Clear();
-                Movies[choice].Play();
+                Movies[choice].Play();  //calls play method for checked out movie
             }
             else
             {

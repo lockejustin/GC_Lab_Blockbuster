@@ -19,16 +19,16 @@ namespace GC_Lab_Blockbuster
             int index = 0;
             string input2 = "";
 
-            while (watchMore)
+            while (watchMore)  //loops until user decides not to watch any more scenes
             {
                 Console.WriteLine($"{Title} Scene List");
 
-                PrintScenes();
+                PrintScenes();  //prints scenes
 
                 Console.Write("Please enter the number of the scene you'd like to watch: ");
 
 
-                while (!validEntry)
+                while (!validEntry)  //validates correct scene choice
                 {
                     input = Console.ReadLine();
 
@@ -53,9 +53,9 @@ namespace GC_Lab_Blockbuster
 
                 Console.Clear();
                 Console.WriteLine("Begin Scene Playback");
-                Console.WriteLine(Scenes[index]);
+                Console.WriteLine(Scenes[index]);  //displays chosen scene
 
-                Console.Write("\nWould you like to watch another scene? (y/n) ");
+                Console.Write("\nWould you like to watch another scene? (y/n) "); //prompts user if they'd like to view another scene
                 input2 = Console.ReadLine().ToLower();
 
                 while (input2 != "y" && input2 != "n")

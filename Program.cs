@@ -15,21 +15,19 @@ namespace GC_Lab_Blockbuster
             bool validEntry = false;
             string input = "";
 
-            while (continueProgram)
+            while (continueProgram) //continues program until user chooses quit option
             {
                 Console.WriteLine("Welcome to the last BlockBuster in existence!\nPlease buy our merch!");
                 Console.WriteLine("\nHere is a list of what you can do.");
-                for (int i = 0; i < menuOptions.Length; i++)
+                for (int i = 0; i < menuOptions.Length; i++)  //writes main menu to console
                 {
                     Console.WriteLine($"{i + 1}) {menuOptions[i]}");
                 }
                 
                 
-                //need validation here
-                Console.Write("Please enter the number of option you'd like to do: ");
-                //menuChoice = int.Parse(Console.ReadLine());
+                Console.Write("Please enter the number of what you'd like to do: ");
 
-                while (!validEntry)
+                while (!validEntry)  //loops until valid integer entry is received 
                 {
                     input = Console.ReadLine();
 
@@ -51,9 +49,7 @@ namespace GC_Lab_Blockbuster
                     }
                 }
 
-
-
-                if (menuChoice == 1)
+                if (menuChoice == 1) //generates list of movies to console
                 {
                     Console.Clear();
                     theStore.PrintMovies();
@@ -62,7 +58,7 @@ namespace GC_Lab_Blockbuster
                     Console.ReadKey();
                     Console.Clear();
                 }
-                else if (menuChoice == 2)
+                else if (menuChoice == 2) //take user to check out menu
                 {
                     Console.Clear();
                     theStore.CheckOut();
@@ -71,7 +67,7 @@ namespace GC_Lab_Blockbuster
                     Console.ReadKey();
                     Console.Clear();
                 }
-                else if (menuChoice == 3)
+                else if (menuChoice == 3) //thanks user for buying some merch
                 {
                     Console.Clear();
                     Console.WriteLine("Thank you for buying merch!  We need all the revenue we can get!");
@@ -80,7 +76,7 @@ namespace GC_Lab_Blockbuster
                     Console.ReadKey();
                     Console.Clear();
                 }
-                else
+                else //quits the program
                 {
                     Console.Clear();
                     Console.WriteLine("Please come back and rent something soon!  Like, really soon.  We are almost out of money.");

@@ -13,7 +13,7 @@ namespace GC_Lab_Blockbuster
 
         }
 
-        public override void Play()
+        public override void Play() //plays the movie from beginning, could not figure out why currentTime value does not pass through
         {
             bool watchMore = true;
             int increment = (RunTime / Scenes.Count);
